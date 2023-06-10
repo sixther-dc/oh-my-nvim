@@ -19,6 +19,7 @@ packer.startup(
     use("ahmedkhalf/project.nvim")
     -- treesitter
     use({ "nvim-treesitter/nvim-treesitter" })
+    use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
     --------------------- LSP --------------------
     use("williamboman/nvim-lsp-installer")
     -- Lspconfig

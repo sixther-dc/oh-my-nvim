@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/Users/duanchao/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "/Users/duanchao/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
+  },
   ["vim-bbye"] = {
     loaded = true,
     path = "/Users/duanchao/.local/share/nvim/site/pack/packer/start/vim-bbye",
