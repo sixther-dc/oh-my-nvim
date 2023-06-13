@@ -21,7 +21,8 @@ packer.startup(
     use({ "nvim-treesitter/nvim-treesitter" })
     use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
     --------------------- LSP --------------------
-    use("williamboman/nvim-lsp-installer")
+    use({ "williamboman/mason.nvim" })
+    use({ "williamboman/mason-lspconfig.nvim" })
     -- Lspconfig
     use({ "neovim/nvim-lspconfig" })
     use({ "ray-x/go.nvim" })
