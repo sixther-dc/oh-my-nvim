@@ -27,6 +27,7 @@ packer.startup(
     use({ "neovim/nvim-lspconfig" })
     use({ "ray-x/go.nvim" })
     use({ "ray-x/guihua.lua" }) -- recommended if need floating window support
+    use({ "folke/neodev.nvim" })
     -- 补全引擎
     use("hrsh7th/nvim-cmp")
     -- snippet 引擎
