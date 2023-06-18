@@ -38,6 +38,7 @@ packer.startup(
     use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
     use("hrsh7th/cmp-path") -- { name = 'path' }
     use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
+    use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
   end)
 
 
