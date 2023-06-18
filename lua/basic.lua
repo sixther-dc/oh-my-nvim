@@ -24,7 +24,7 @@ vim.o.incsearch = true
 -- 显示左侧图标指示列
 vim.wo.signcolumn = "yes"
 -- 右侧参考线，超过表示代码太长了，考虑换行
--- vim.wo.colorcolumn = "80"
+--vim.wo.colorcolumn = "80"
 -- 命令行高为2，提供足够的显示空间
 vim.o.cmdheight = 1
 -- 鼠标支持
@@ -38,3 +38,4 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
+vim.opt.swapfile = false
