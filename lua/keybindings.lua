@@ -9,7 +9,8 @@ local pluginKeys = {}
 map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 -- 全局搜索
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
-
+--将vim复制到系统剪贴板的命令映射为ctr - y
+map("v", "<C-y>", "\"+y", opt)
 -- bufferline
 -- 左右Tab切换
 map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
