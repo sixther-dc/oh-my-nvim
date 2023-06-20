@@ -45,4 +45,3 @@ vim.api.nvim_create_autocmd({ "InsertLeave" }, {
     vim.notify("Autosaved!", vim.log.levels.INFO, {})
   end,
 })
-

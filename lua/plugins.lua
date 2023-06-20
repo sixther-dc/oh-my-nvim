@@ -39,6 +39,9 @@ packer.startup(
     use("hrsh7th/cmp-path") -- { name = 'path' }
     use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
     use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
+    use("windwp/nvim-autopairs")
+    -- indent-blankline
+    use("lukas-reineke/indent-blankline.nvim")
   end)
 
 
