@@ -1,57 +1,43 @@
-local packer = require("packer")
-packer.startup(
-  function(use)
-    -- Packer 可以管理自己本身
-    use 'wbthomason/packer.nvim'
-    use 'navarasu/onedark.nvim'
-    -- nvim-tree
-    use({ "nvim-tree/nvim-tree.lua", requires = "nvim-tree/nvim-web-devicons" })
-    -- bufferline
-    use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" }})
-    -- lualine
-    use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
-    use("arkav/lualine-lsp-progress")
-    -- telescope
-    use { 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" } }
-    -- dashboard-nvim
-    use("glepnir/dashboard-nvim")
-    -- project
-    use("ahmedkhalf/project.nvim")
-    -- treesitter
-    use({ "nvim-treesitter/nvim-treesitter" })
-    use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
-    --------------------- LSP --------------------
-    use({ "williamboman/mason.nvim" })
-    use({ "williamboman/mason-lspconfig.nvim" })
-    -- Lspconfig
-    use({ "neovim/nvim-lspconfig" })
-    use({ "ray-x/go.nvim" })
-    use({ "ray-x/guihua.lua" }) -- recommended if need floating window support
-    use({ "folke/neodev.nvim" })
-    -- 补全引擎
-    use("hrsh7th/nvim-cmp")
-    -- snippet 引擎
-    use("hrsh7th/vim-vsnip")
-    -- 补全源
-    use("hrsh7th/cmp-vsnip")
-    use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
-    use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
-    use("hrsh7th/cmp-path") -- { name = 'path' }
-    use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
-    use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
-    use("windwp/nvim-autopairs")
-    -- indent-blankline
-    use("lukas-reineke/indent-blankline.nvim")
-  end)
-
-
--- 每次保存 plugins.lua 自动安装插件
-pcall(
-  vim.cmd,
-  [[
-    augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-    augroup end
-  ]]
-)
+-- lazy plugin
+require("lazy").setup({
+    "navarasu/onedark.nvim",
+    { "nvim-tree/nvim-tree.lua", dependencies = "nvim-tree/nvim-web-devicons" },
+    "lukas-reineke/indent-blankline.nvim",
+	-- bufferline,
+    { "akinsho/bufferline.nvim", dependencies = { "nvim-tree/nvim-web-devicons", "moll/vim-bbye" }},
+	-- lualine,
+    --{ "nvim`-lualine/lualine.nvim", dependencies = { "kyazdani42/nvim-web-devicons" } },
+    { "nvim`-lualine/lualine.nvim", dependencies = { } },
+    "arkav/lualine-lsp-progress",
+    -- telescope,
+    { 'nvim-telescope/telescope.nvim', dependencies = { "nvim-lua/plenary.nvim" } },
+    -- dashboard-nvim,
+    "glepnir/dashboard-nvim",
+	-- project,
+    "ahmedkhalf/project.nvim",
+    -- treesitter,
+    { "nvim-treesitter/nvim-treesitter" },
+    {"akinsho/toggleterm.nvim", tag = 'v2.*'},
+    --------------------- LSP --------------------,
+	{ "williamboman/mason.nvim" },
+    { "williamboman/mason-lspconfig.nvim" },
+    -- Lspconfig,
+    { "neovim/nvim-lspconfig" },
+    { "ray-x/go.nvim" },
+    { "ray-x/guihua.lua" },
+    { "folke/neodev.nvim" },
+	-- 补全引擎,
+    "hrsh7th/nvim-cmp",
+    -- snippet 引擎,
+    "hrsh7th/vim-vsnip",
+    -- 补全源,
+    "hrsh7th/cmp-vsnip",
+    "hrsh7th/cmp-nvim-lsp", -- { name = nvim_lsp }
+    "hrsh7th/cmp-buffer", -- { name = 'buffer' }
+    "hrsh7th/cmp-path", -- { name = 'path' },
+    "hrsh7th/cmp-cmdline", -- { name = 'cmdline' }
+    {"ellisonleao/glow.nvim", config = function() require("glow").setup() end},
+    "windwp/nvim-autopairs",
+    -- indent-blankline,
+    "lukas-reineke/indent-blankline.nvim",
+})
