@@ -31,6 +31,7 @@ require("plugin-config.neodev")
 require("plugin-config.toggleterm")
 require("plugin-config.nvim-autopairs")
 require("plugin-config.indent-blankline")
+require("plugin-config.peek")
 require("lsp.setup")
 require("lsp.cmp")
 

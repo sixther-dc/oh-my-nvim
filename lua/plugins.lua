@@ -6,8 +6,7 @@ require("lazy").setup({
   -- bufferline,
   { "akinsho/bufferline.nvim", dependencies = { "nvim-tree/nvim-web-devicons", "moll/vim-bbye" }},
   -- lualine,
-  --{ "nvim`-lualine/lualine.nvim", dependencies = { "kyazdani42/nvim-web-devicons" } },
-  { "nvim`-lualine/lualine.nvim", dependencies = { } },
+  { "nvim-lualine/lualine.nvim", dependencies = { } },
   "arkav/lualine-lsp-progress",
   -- telescope,
   { 'nvim-telescope/telescope.nvim', dependencies = { "nvim-lua/plenary.nvim" } },
@@ -17,7 +16,7 @@ require("lazy").setup({
   "ahmedkhalf/project.nvim",
   -- treesitter,
   { "nvim-treesitter/nvim-treesitter" },
-  {"akinsho/toggleterm.nvim", tag = 'v2.*'},
+  {"akinsho/toggleterm.nvim", version = "*", config = true},
   --------------------- LSP --------------------,
   { "williamboman/mason.nvim" },
   { "williamboman/mason-lspconfig.nvim" },
@@ -36,8 +35,10 @@ require("lazy").setup({
   "hrsh7th/cmp-buffer", -- { name = 'buffer' }
   "hrsh7th/cmp-path", -- { name = 'path' },
   "hrsh7th/cmp-cmdline", -- { name = 'cmdline' }
-  {"ellisonleao/glow.nvim", config = function() require("glow").setup() end},
   "windwp/nvim-autopairs",
   -- indent-blankline,
   "lukas-reineke/indent-blankline.nvim",
+  -- suport rust
+  "simrat39/rust-tools.nvim",
+  { "toppair/peek.nvim", build = 'deno task --quiet build:fast' }
 })

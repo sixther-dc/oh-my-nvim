@@ -34,6 +34,10 @@ mason_config.setup({
   ensure_installed = {
     "lua_ls",
     "gopls",
+    "tsserver",
+    "html",
+    "cssls",
+    "rust_analyzer",
   },
 })
 
@@ -44,6 +48,10 @@ mason_config.setup({
 local servers = {
   lua_ls = require("lsp.config.lua"), -- lua/lsp/config/lua.lua
   gopls = require("lsp.config.go"),
+  tsserver = require("lsp.config.tsserver"),
+  html = require("lsp.config.html"),
+  cssls = require("lsp.config.cssls"),
+  rust_analyzer = require("lsp.config.rust_analyzer"),
 }
 for name, config in pairs(servers) do
   if config ~= nil and type(config) == "table" then
