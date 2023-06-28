@@ -40,5 +40,6 @@ require("lazy").setup({
   "lukas-reineke/indent-blankline.nvim",
   -- suport rust
   "simrat39/rust-tools.nvim",
-  { "toppair/peek.nvim", build = 'deno task --quiet build:fast' }
+  { "toppair/peek.nvim", build = 'deno task --quiet build:fast' },
+  "numToStr/Comment.nvim",
 })

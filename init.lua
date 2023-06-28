@@ -1,3 +1,4 @@
+--lazy 插件管理器
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -19,6 +20,7 @@ require("basic")
 require("colorscheme")
 -- 快捷键映射
 require("keybindings")
+
 -- 插件配置
 require("plugin-config.nvim-tree")
 require("plugin-config.bufferline")
@@ -32,6 +34,7 @@ require("plugin-config.toggleterm")
 require("plugin-config.nvim-autopairs")
 require("plugin-config.indent-blankline")
 require("plugin-config.peek")
+require("plugin-config.comment")
 require("lsp.setup")
 require("lsp.cmp")
 
