@@ -4,7 +4,7 @@ vim.o.fileencoding = 'utf-8'
 -- 显示行号
 vim.wo.number = true
 -- 高亮所在行
-vim.wo.cursorline = true
+-- vim.wo.cursorline = true
 -- 缩进2个空格等于一个Tab
 vim.o.tabstop = 2
 vim.bo.tabstop = 2
