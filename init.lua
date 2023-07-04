@@ -20,6 +20,7 @@ require("basic")
 require("colorscheme")
 -- 快捷键映射
 require("keybindings")
+-- require("dc")
 
 -- 插件配置
 require("plugin-config.nvim-tree")
