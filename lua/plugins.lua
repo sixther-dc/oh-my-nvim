@@ -35,7 +35,6 @@ require("lazy").setup({
   "hrsh7th/cmp-buffer", -- { name = 'buffer' }
   "hrsh7th/cmp-path", -- { name = 'path' },
   "hrsh7th/cmp-cmdline", -- { name = 'cmdline' }
-  "rafamadriz/friendly-snippets",
   "windwp/nvim-autopairs",
   -- indent-blankline,
   "lukas-reineke/indent-blankline.nvim",
@@ -43,5 +42,13 @@ require("lazy").setup({
   "simrat39/rust-tools.nvim",
   { "toppair/peek.nvim", build = 'deno task --quiet build:fast' },
   "numToStr/Comment.nvim",
-  "dcampos/cmp-snippy",
+  {
+    'stevearc/aerial.nvim',
+    opts = {},
+    -- Optional dependencies
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons"
+    },
+  }
 })
