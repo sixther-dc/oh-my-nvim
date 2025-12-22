@@ -31,3 +31,5 @@ this phrase takes time but even get to the point  {test}
 --- | ----
 peekopen | 打开markdown预览 
 
+
+![](1.svg)
