@@ -50,3 +50,11 @@ jobs:
           asset_path: ./init.lua
           asset_name: init.lua
           asset_content_type: text/plain
+
+      - name: Upload init.lua to CNB release
+        uses: docker://docker.cnb.cool/looc/git-cnb:latest
+        env:
+          CNB_TOKEN: ${{ secrets.CNB_TOKEN }}
+        with:
+          entrypoint: /bin/bash
+          args: -c "ls -la && echo 'Current directory: $(pwd)' && git-cnb --help"
